@@ -26,7 +26,7 @@ DbContext is your gateway to the database. A descendent of this class contains t
 
 We'll focus on a Code First approach to working with the database. In this sample, we'll manage a database for our blog. Let's create a simple Blogpost type:
 
-```
+```csharp
     public class BlogPost {
 
     public int Id { get; set; }
