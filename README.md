@@ -13,11 +13,14 @@ dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.Tools
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 ```
+This will fetch the NuGet package containing the libraries and all of the tools for working with our database and add them to our project.
 
-## Requirements
+## Introducing DbContext
 
-- .NET 8.0 SDK
-- SQLite
+DbContext is your gateway to the database. A descendent of this class contains table references and configuration to connect to your database. There are two ways to work with this class:
+
+- Create the class and its classes to work with FIRST, called "Code First"
+- Extract a definition and class hierarchy from your existing database, called "Data First"
 
 ## Setup Instructions
 
