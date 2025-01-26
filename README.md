@@ -66,4 +66,61 @@ You can intsall the latest version of the ef tools using the following command:
 ```markdown
 dotnet tool install --global dotnet-ef
 ```
-   
+When a new version is available, you can update with this command:
+
+```markdown
+dotnet tool update dotnet-ef --global
+```
+You will now be able to use `ef` tools from the dotnet command line to interact with the database. First, we'll want to configure a connection to the database. In this sample, we'll add a method to our `AppDbContext` class, but in real-world applications this would be fetched from application configuration and passed in:
+
+```csharp
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+
+      var conn = @"Data Source=appdb.db;";
+      optionsBuilder.UseSqlite(conn);
+
+      base.OnConfiguring(optionsBuilder);
+    }
+```
+**Migrations**
+
+We can now start creating Migrations, blocks of code that maintain the schema of the database. Each migration is a unit that can be applied and removed programmatically from the database. Create your first migration to define the `BlogPost` storage using this command:
+
+```markdown
+dotnet ef migrations add "Add BlogPosts"
+```
+This will create the `Migrations` folder and add some files to it with the definitions of the `Posts` table. Each time we modify the objects that will be stored in the database, we need to create additional migrations to be applied to the database.
+
+**Database Update**
+
+We can apply any newly created migrations to our database with this command:
+
+```markdown
+dotnet ef database update
+```
+You can also go the *OTHER WAY* and create your DbContext and objects from the database using the command:
+
+```markdown
+dotnet ef dbcontext scaffold "Data Source=appdb.db" Microsoft.EntityFrameworkCore.Sqlite
+```
+
+## CRUD Operations
+
+View SQL statement with query.ToQueryString() UseSqlite().LogTo()
+
+**Reading Data**
+
+WithNoTracking()
+
+**Creating Data**
+
+**Updating Data**
+
+**Deleting Data**
+
+## Relational Data
+
+Foreign Keys / Navigation property [https://docs.microsoft.com/ef/core/modeling/relationships](https://docs.microsoft.com/ef/core/modeling/relationships)
+
+![Many to Many ](image.png)
