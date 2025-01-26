@@ -8,10 +8,11 @@ Let's create a console application as test-bed for interaction with database. Ad
 
 We can add EntityFramework Core to our project with these commands:
 
-'''powershell
+```powershell
 dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.Tools
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+
 
 ## Requirements
 
