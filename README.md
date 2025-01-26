@@ -24,8 +24,7 @@ DbContext is your gateway to the database. A descendent of this class contains t
 
 ## Setup Instructions
 
-1. Clone the repository.
-2. Install dependencies:
+Defining a class to be stored in a table
 
    ```bash
    dotnet restore
