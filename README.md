@@ -11,7 +11,7 @@ We can add EntityFramework Core to our project with these commands:
 ```powershell
 dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.Tools
-dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite```
 
 
 ## Requirements
