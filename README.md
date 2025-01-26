@@ -123,6 +123,6 @@ WithNoTracking()
 
 Foreign Keys / Navigation property [https://docs.microsoft.com/ef/core/modeling/relationships](https://docs.microsoft.com/ef/core/modeling/relationships)
 
-<img src="image.png" alt="Many to Many" width="600" align="left"/>
+<img src="image.png" alt="Many to Many" width="500" align="left"/>
 
 
