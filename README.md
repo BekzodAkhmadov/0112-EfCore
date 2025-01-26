@@ -43,4 +43,27 @@ We'll focus on a Code First approach to working with the database. In this sampl
 
   }
 ```
+We can create a `DbContext` for our blog and add a property of type `DbSet<BlogPost>` to define a table to be created for our `BlogPost` objects:
+
+```csharp
+ public class AppDbContext : DbContext 
+  {
+
+    public DbSet<BlogPost> Posts { get; set; }
+
+  }
+```
+When we want to interact with the `BlogPost` objects in the database, we'll reach into the `Posts` property and use standard LINQ queries as well as collection interactions to add, update, and delete records from the database.  
+
+## EF Tools
+
+With these C# classes created, how do we complete the connection to the database? Enter the ef tools. These are global tools that run at the command-line and allow you to manage the connection and definition of the database your code will work with.
+
+**Installation**
+
+You can intsall the latest version of the ef tools using the following command:
+
+```markdown
+dotnet tool install --global dotnet-ef
+```
    
