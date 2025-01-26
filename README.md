@@ -22,7 +22,7 @@ DbContext is your gateway to the database. A descendent of this class contains t
 - Create the class and its classes to work with FIRST, called "Code First"
 - Extract a definition and class hierarchy from your existing database, called "Data First"
 
-## Defining a class to be stored in a table
+**Defining a class to be stored in a table**
 
 We'll focus on a Code First approach to working with the database. In this sample, we'll manage a database for our blog. Let's create a simple Blogpost type:
 
